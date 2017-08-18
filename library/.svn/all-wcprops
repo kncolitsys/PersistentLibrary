@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/cflibrary/!svn/ver/19/library
+END
+titleCase.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/cflibrary/!svn/ver/15/library/titleCase.cfm
+END
+isUrl.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/cflibrary/!svn/ver/15/library/isUrl.cfm
+END
+example.cfc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/cflibrary/!svn/ver/15/library/example.cfc
+END
+toArray.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/cflibrary/!svn/ver/15/library/toArray.cfm
+END
+isEmail.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/cflibrary/!svn/ver/15/library/isEmail.cfm
+END
+example.init
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/cflibrary/!svn/ver/15/library/example.init
+END

@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CF Library Documentation</title>
+<style type="text/css">
+body{padding:30px;margin:0;font-size:13px;font-family:Arial, Helvetica, sans-serif;}
+a{color:#999999;text-decoration:none;}
+a:hover{text-decoration:underline;}
+select{color:#666666;font-size:13px;}
+.header{font-weight:normal; font-size:20px; margin:-30px; margin-bottom:20px; padding:5px; padding-top:5px; padding-left:5px; background-color: #4C5A60;}
+.header a{text-decoration:none;color:white;}
+h3.title{color:#444;text-decoration:none;font-size:16px;font-weight:bold;padding-right:25px;border-bottom:1px solid #EFF6FF;max-width:300px;}
+#copyright{margin-left:0px;display:block;font-size:13px;color:#aaa;margin-top: 5px;}
+#navlinks{list-style:none;margin:0px;padding:0px;margin-top: 5px;}
+#navcontainer{width:120px; -moz-border-radius:4px; background:#f5f5f5; border:1px solid #dddddd; padding:10px 30px 15px 30px; font-size:12px; color:#aaaaaa; border-width:0 1px 1px 0;}
+td#nav{vertical-align: top; width:125px;}
+.textBox {width: 500px; height: 300px;}
+.versionHistory {width: 70%; border-collapse: collapse; border: 1px solid black;}
+.versionHistory th {background-color: #aaa;}
+.versionHistory tr.alt {background-color: #ddd;} 
+.versionHistory a {color: black; text-decoration: underline;}
+.code, .wiki_code{white-space: pre; font-family:'courier new', courier, monospace; width: 950px; border: 1px solid #3D8BD8; padding: 5px; background-color: #EEEEEE;}
+.wiki_nocontentyet, .wiki_stub, .wiki_categorylist {padding: 1em; background-color: #f9f9f9; border-width:1px; border-color: #aaa;}
+.wiki_categorylist {margin-top: 10px; border-style:solid;}
+.wiki_nocontentyet, .wiki_stub { font-style:italic; border-style:dashed;}
+.wiki_nocontentyet { color: red;}
+.wiki_stub { color: black;}
+.wiki_results h2 { margin-bottom:0px;}
+.wiki_printicons { float:right; display:inline;}
+#navlinks h6 { font-weight: bold; font-size: 1em; border-bottom: 1px solid #766c45; margin: 0 0 2px 0; padding: 0;}
+.wiki_formfieldcomment {color:#666; font-size:9px;}
+#wiki_loginform label {float:left; width:100px; font-weight:bold;}
+#wiki_editform label {float:left; width:200px; font-weight:bold;}
+#wiki_uploadform label {float:left; width:150px; font-weight:bold;}
+#wiki_movepageform label {float:left; width:100px; font-weight:bold; text-align:right; padding-right:5px;}
+.wiki_nobreak {white-space: nowrap;}
+.wiki_inline_image {border:0}
+table.wiki_diff { width: 100%; }
+.wiki_diff tr, table.wiki_diff { margin: 0px; padding: 0px; }
+.wiki_diff th { background-color: #ccc; vertical-align: top; }
+.wiki_diff td { margin: 0px; padding: 3px; font-family:  'Bitstream Vera Sans Mono', 'Bitstream Vera Mono', 'Lucida Console', 'Lucida Typewriter', 'Courier New', monspace, fixed, fixed-width; font-size: 12px; vertical-align: top; }
+.wiki_diff td.wiki_diff_linenum { background-color: #e0e0e0; color: #666; border-right: 1px solid #d0d0d0; border-left: 1px solid #c0c0c0; text-align: right; }
+.wiki_diff_ins { background-color: #afa; }
+.wiki_diff_del { background-color: #faa; }
+.wiki_diff_upd { background-color: #aaf; }
+.wiki_diff_legend {margin:auto; width:120px; text-align:center; border: 1px solid #d0d0d0; padding:5px;}
+.wiki_diff_legend table {text-align:center; margin:auto;}
+.wiki_diff_legend h3 {margin: 0px;}
+#wiki_redirectedfrom, #wiki_redirectedfrom a, #wiki_redirectedfrom a:hover, #wiki_redirectedfrom a:visited {font-size:.8em}
+#wiki_redirectedfrom {color:#9F9F9F;}
+#wiki_redirectedfrom a, #wiki_redirectedfrom a:hover, #wiki_redirectedfrom a:visited {color:#9F4627;}
+.wiki_error {width: 70%; border: 1px solid #3D8BD8; padding: 5px; background-color: #eee;}
+.wiki_toc { border: 1px solid #3D8BD8; padding: 5px; background-color: #eee; font-size: 10px;}
+.wiki_toc a, .wiki_toc a:visited, .wiki_toc a:hover {color:#9F4627;}
+.wiki_toc h2 {padding:0; margin:0;  font-size: 12px;}
+.wiki_toc ul {padding:0 0 0 15px; list-style:none;margin:0;}
+</style>
+</head>
+
+<body>
+<h1>Main</h1><table><tr><td><div class="wiki_toc"><h2>Contents</h2><div class="wiki_toc_items">
+<ul>
+<li><a href="#CF_Library_Documentation">1 CF Library Documentation</a><ul>
+<li><a href="#Authors">1.1 Authors</a></li>
+<li><a href="#License">1.2 License</a></li>
+<li><a href="#About_CF_Library">1.3 About CF Library</a></li>
+
+<li><a href="#How_It_Works">1.4 How It Works</a></li>
+<li><a href="#Requirements">1.5 Requirements</a></li>
+<li><a href="#Installation">1.6 Installation</a><ul>
+<li><a href="#Global__preferred_">1.6.1 Global (preferred)</a></li>
+<li><a href="#Website_Root">1.6.2 Website Root</a></li></ul>
+<li><a href="#Deployment_Scenarios">1.7 Deployment Scenarios</a><ul>
+<li><a href="#Using_the_server_scope_and_initializing_at_server_startup">1.7.1 Using the server scope and initializing at server startup</a></li>
+<li><a href="#Using_the_scope_of_your_choice_and_initializing_using_Applicaton_cfm_cfc">1.7.2 Using the scope of your choice and initializing using Applicaton.cfm/cfc</a></li></ul>
+<li><a href="#Usage">1.8 Usage</a><ul>
+
+<li><a href="#Description">1.8.1 Description</a></li>
+<li><a href="#Syntax">1.8.2 Syntax</a></li>
+<li><a href="#Examples">1.8.3 Examples</a></li></ul>
+<li><a href="#Adding_Functions_and_CFCs_to_the_Library">1.9 Adding Functions and CFCs to the Library</a></li>
+<li><a href="#Calling_Your_Functions_and_CFCs">1.10 Calling Your Functions and CFCs</a></li>
+<li><a href="#Stateful_Components">1.11 Stateful Components</a></li></ul>
+</li></ul>
+</div></div></td></tr></table>
+<h1><a name="CF_Library_Documentation"></a>CF Library Documentation</h1>
+<h2><a name="License"></a>License</h2>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</p>
+<h2><a name="About_CF_Library"></a>About CF Library</h2>
+<p>
+CF Library (original huh?) is a simple framework for implementing a persistent library of functions and components on Coldfusion and compatible servers. It allows you to use and manage functions and cfc components in a manner very similar to how custom tags are managed. Once the framework is in place, adding new functions or components is as simple as placing the required files in the library directory and issuing a rebuild. There are no configuration	files involved. It just works - assuming your code does :)
+</p>
+<p>There are many very good <strong><em>development</strong></em> frameworks for Coldfusion. This is not one of them. Check out <a href="http://www.fusebox.org/">fusebox</a> or <a href="http://www.mach-ii.com/">Mach-II</a> if that is what you're looking for (both are very good). CF Library does one and only one thing - it makes it simple and easy to create and manage a library of persistent functions and components. It tries to do for functions and cfcs what the custom tag framework does for tags: create transparent extensions to the Coldfusion language that require no boiler-plate code. If you are looking for some pre-built functions to populate your library, try the <a href="http://cflib.org/">Common Function Library Project</a>. The code you download there can be dropped into your library with little or no changes, assuming the function is designed to work with your server version.
+
+</p>
+<h2><a name="How_It_Works"></a>How It Works</h2>
+<p>A single simple custom tag, cf_library, is used to bootstrap the library. It checks to see if the library has been initialized, and if it hasn't (or if a rebuild has been requested using the rebuild attribute) the custom tag initializes a component called library.cfc in the requested scope (either server, application, or session). The	library.cfc component recursively scans it's library folder for functions and component files. When a function file is found, it is bound to the library as a public method. CFCs are bound to the library as public member components. It can also optionally create a local reference in the calling scope that points to the library component in the persistent scope (a shortcut if you will). Library.cfc does nothing else. If your familiar with low-level programming terms, CF Library is the equivalent of a dumb linker (it links everything as opposed to a smart linker which only links code that it detects is being called). If your not into low-level programming stuff, you can just ignore all that and think of it as an additional scope for your functions and cfcs to live in.
+</p>
+<p>The end result is that a single monolithic cfc is created which contains all of the functions and cfcs you placed in the library. It is also persistent - it will remain in memory until the scope it lives in expires.
+</p>
+<h2><a name="Requirements"></a>Requirements</h2>
+<ol><li>A Coldfusion or compatible server which supports CFCs. CFMX 6 or later, as well as Blue Dragon 6 or later (Java or .NET) have been tested and are supported. I've never tested with others, but CF Library itself doesn't exercise much code, basic support for cfcs should be all that is required. Platform and OS don't matter. However, keep in mind the functions and components you place within the library must be compatible with your server - CF Library doesn't perform magic.
+</li><li>You must also be able to execute createObject() and cfdirectory (if you environment restricts these you will not be able to use CF Library).
+</li><li>cfdirectory must be able to read the contents of the library folder. This is sometimes an issue on servers running sandbox security.
+</li></ol><p>
+</p>
+<h2><a name="Installation"></a>Installation</h2>
+<p>There are two options for installation:
+
+</p>
+<h3><a name="Global__preferred_"></a>Global (preferred)</h3>
+<p>Most installations of Coldfusion will have a CF mapping setup for the purpose of storing global CFCs. If you do not have a mapping for global CFCs, you will need to create one. The directory can be anywhere, but the conventional approach is to create a folder called cfcs in your CF installation directory and create a mapping in CF Admin called cfcs that points to this folder. Once you have done this just copy the cflibrary folder to your mapped directory. The next step is to copy the file library.cfm to your customtags folder. Libarary.cfm as shipped assumes the location of libarary.cfc is cfcs.cflibrary.library. if you would like to change that then edit the libarary.cfm file and change the default value of the cfcpath attribute to the location of your choice.
+</p>
+<h3><a name="Website_Root"></a>Website Root</h3>
+<p>If your in a shared hosting environment, you are probably not able to add your own customtags. You can still use CF Library, but you will probably be unable to use the server scope (because it is usually restricted). In this scenario simply copy the cflibrary folder to your website root directory. By default you will have to use
+cfmodule to bootstrap the library. If you would prefer, you can copy the library.cfm file from the cflibrary folder to your website root directory. This will allow you to call it using the normal customtag syntax, but only from templates in the same directory (you generally call it from your Application.cfm/cfc file, which is also usually in the site root). When calling the tag, you will have to pass the location of the library.cfc file to the tag using the cfcpath attribute as a relative path. Assuming your followed the above instructions, you relative path would be cflibrary.library. If you would like to make that the default path so you do not have to specify it for every call then edit the libarary.cfm file and change the default value of the cfcpath attribute to the location of your choice. 
+</p>
+<p>Thats it. Once you have done one of the above the library is installed.
+</p>
+<h2><a name="Deployment_Scenarios"></a>Deployment Scenarios</h2>
+<p>There are quite a few different ways CF Library can be deployed, but the two most common scenarios are:
+</p>
+<h3><a name="Using_the_server_scope_and_initializing_at_server_startup"></a>Using the server scope and initializing at server startup</h3>
+
+<p>This is the most transparent method. It requires installation in the customtags folder and full control of the server (something you will generally not have in a shared hosting environment unless you are the server administrator). The basic idea is that you create a template that you will load from your startup scripts for you server (how to do this part is outside the scope of this document). The beauty of this method is it is transparent - the functions and cfcs in the library will just be there - there is no need to call cf_library from your site's code to do conditional initialization. The only time you would call it would be to force a rebuild, and you can just hit the same template to do that. The library will be callable from any website on the server. Note that the use of the variable attribute to create a shortcut in the calling scope will not work in this scenario - code referencing the library will have to use the full scope references - i.e. <em>server.lib.whatever()</em>. This method of deployment is well suited to Hosting Providers, those who run multiple websites, or anyone that wishes to implement the library in the most transparent way possible.
+</p>
+<h3><a name="Using_the_scope_of_your_choice_and_initializing_using_Applicaton_cfm_cfc"></a>Using the scope of your choice and initializing using Applicaton.cfm/cfc</h3>
+<p>This method will work with both Customtag installs as well as Website Root installs. Just add a call to your Application.cfm/cfc to initialize the framework. CF library will only initialize the library on the first call, subsequent calls only execute a few ifs and optionally setup a shortcut in the caller scope (about 6-8 lines of very simple code are exercised). While not quite as transparent as the first method, its still quite simple and has no significant overhead. As for which scope to use, that depends on what you goal is. The server scope is the default (again, this may not work due to server restrictions in a shared hosting environment). Using the server scope will make the library be shared by all code on the server. The application scope is probably what you will want to use for shared hosting environments, but keep in mind the library will only be visible from the code running under the context of the current application.cfm/cfc. If your site has many different application.cfm/cfc files, you will have to add a call to cf_library to all of them. Be aware that this will create duplicate, independent copies of the library in memory - instance data will not be shared amongst them so you should probably avoid storing stateful CFCs in the library unless you only use one Application.cfm/cfc on your site. The session scope is also supported, but you would only want to use the session scope if you want every user of you website to have a separate copy of the library (which is probably a very bad idea - don't use the session scope unless you know why your doing it).
+</p>
+<h2><a name="Usage"></a>Usage</h2>
+<h3><a name="Description"></a>Description</h3>
+<p>Conditionally initializes library.cfc in the selected scope.
+</p>
+<h3><a name="Syntax"></a>Syntax</h3>
+<div class="wiki_code">&lt;cf_library
+
+&nbsp;&nbsp;&nbsp;name = "libraryName"
+&nbsp;&nbsp;&nbsp;scope = "server" or "application" or "session"
+&nbsp;&nbsp;&nbsp;variable = "callerVariableName"
+&nbsp;&nbsp;&nbsp;cfcpath = "libraryComponent"
+&nbsp;&nbsp;&nbsp;rebuild = "true" or "false" /&gt;
+</div><p>
+</p>
+<div class="wiki_code"><strong>Attribute</strong>   <strong>Req.</strong> <strong>Type</strong>       <strong>Default</strong>	             <strong>Description</strong>
+
+name        No   String     lib                      The name used to reference the library.
+scope       No   String     server                   Scope to create the library in (server, application, or session).
+variable    No   String                              Caller variable reference to library. Not used by default.
+cfcpath     No   String     cfcs.cflibrary.library   The relative path to the library.cfc file from the
+                                                     library.cfm file, or an absolute path using a CF
+                                                     mapping (dot delimited component style path).
+rebuild     No   Boolean    false                    Flag to force a rebuild of the library.
+</div><h3><a name="Examples"></a>Examples</h3>
+<p>Initialize the library using the default attributes.
+</p>
+<div class="wiki_code">&lt;cf_library /&gt;
+</div><p>Same as above, but will rebuild the library every time it is called. Useful for debugging.
+</p>
+<div class="wiki_code">&lt;cf_library rebuild="true" /&gt;
+</div><p>Same as above, but instead will check the url scope for a parameter called "rebuildLibrary" and if it exists will perform the rebuild. This is a nice way to allow on-demand rebuilds of the library, but be careful as anyone who knows the name of the parameter can force a rebuild. You may alternately want to create a single template to force a rebuild and password protect it for security.
+</p>
+<div class="wiki_code">&lt;cf_library rebuild="#isDefined("url.rebuildLibrary")#" /&gt;
+</div><p>
+</p>
+
+<h2><a name="Adding_Functions_and_CFCs_to_the_Library"></a>Adding Functions and CFCs to the Library</h2>
+<p>The directory structure of the library is completely up to you. Setting up a directory structure in the library is optional, but it will make your code easier to maintain. There are a couple of example files in the library (which you can delete) that give a general idea of how to use to library. Any code placed in the library should be wrapped in either a cffunction or cfcompoent tag, naked code can and will case problems. If you prefer using cfscript, that is supported as well, but again make sure there are is no code existing outside of a function body and you must properly wrap your code in cfscript tags.	Functions should be placed in .cfm files. I recommend one function per file, but multiple functions per file works fine as well. No other special considerations have to be made for functions.
+</p>
+<p>Components should be placed within cfc files as usual. Most CFCs will work unchanged, but you may need to add an init file if you have to perform some sort of initialization	prior to using the component. If that is the case simple create a file with the same name as the cfc, but replace ".cfc" with ".init" and put it in the same directory as the component. Place your initialization code in this file. The framework will take care of calling it after component creation. Thats pretty much it - just put your code in the library and issue a rebuild and you should be able to call it afterwards.
+</p>
+<p>Note: The library itself is flat - all functions and components live at the same level. This was done on purpose to simplify calling semantics. This means all functions and components must have unique names within the library, even if they exist in different directories. Function names are determined by their specified names, but cfc names are based on the filename of the .cfc file.
+</p>
+<h2><a name="Calling_Your_Functions_and_CFCs"></a>Calling Your Functions and CFCs</h2>
+<p>You call functions and CFCs within the library exactly the same way as you call standard functions and CFCs. The only difference is you have to prefix them with the scope and the name of your library (the default is lib). So if you have a function called "toArray()" in the library, and you have used the default attributes when initializing the library, you would type <em>server.lib.toArray()</em>. If you had instead	placed the library in the application scope, you would use <em>application.lib.toArray()</em>. The exact same applies to CFCs, but the name you use to refer to your CFC is the filename of the cfc file. If you use the variable attribute when initializing the library, you can use that instead of the fully scoped name. So if your variable name is lib, you would just type <em>lib.toArray()</em>.
+
+</p>
+<h2><a name="Stateful_Components"></a>Stateful Components</h2>
+<p>Some components maintain an internal state. When placing such components in the library, you <strong>must</strong> properly deal with concurrent access through some sort of locking strategy to avoid race conditions. Many such CFCs will handle their own locking and are thread-safe, if that is the case you should have no problems. But if you are not experienced with writing thread-safe code for Coldfusion I suggest you stick to simple functions and avoid using any kind of global variables. An example.cfc is included in the library that provides a skeleton for a stateful and thread-safe CFC, you can use it as a starting point if you want to experiment. I highly recommend extensive testing before using such code in a production environment.</p>
+
+
+</body>
+</html>
